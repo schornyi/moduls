@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Food, LLC</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <div class="navbar-brand">
+				<h1>Food, LLC</h1>
+          </div>
+
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+		</div>
+						
+		 <div id="collapsable-nav" class="collapse navbar-collapse"> 
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" class="visible-xs">Chicken</a>
+            </li>
+            <li>
+              <a href="#" class="visible-xs">Beef</a>
+            </li>
+            <li>
+              <a href="#" class="visible-xs">Sushi</a>
+            </li>
+           </ul>
+        </div>
+		
+					
+      </div> 
+    </nav>
+
+  </header>
+  
+<p class="text-center">Our Menu</p>  
+ 
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12">
+	<div class="text">
+	<p class="text-center" id="w">Chicken</p>
+		<p>In part one of the this lecture we wrote
+the HTML for the first cell in our grid, in this lecture we're going
+to start styling that cell. Okay so for now we have only one cell so
+let's go ahead and grab this and copy it, so we at least have two cells
+to take a look at in the browser. Let's save that, and
+let's go to the browser. And, here we are. So, we see that we have our picture here. Picture with what looks like an egg roll. With to the right of it, we have our
+title of the menu and some lorem ipsum text that's going to be a description
+with, it's not really styled yet. This D01 is sitting all the way here,
+Instead of down here and this is not styled 100% either. So let's go back to the code editor and
+give it some styles. First of all, let's give the second cell
+instead of d1, let's give it a d2 so we can understand
+the difference between the two. Let's go open our styles.css and I already have some pre-made styles
+that I prepared before the lecture. So let's go ahead and copy and paste them
+right under our menu category styles. Let's go find them real quick. They should be under home,
+menu categories, page. And here it is so let's go ahead and
+paste it right here and what we're going to do is we're
+going to comment them out so we'll go one by one and
+explain them a little bit better that way. Let's comment them out right here and the first thing we want to
+do is the menu item tile. So the menu item tile is this one
+right here its that single cell grid, in other words that's this whole thing
+that is this single cell grid right here. So what we're doing here is I want
+the margin bottom to be 25 pixels, so basically what we're doing is we're saying
+I want to separate this a little bit from the next row even though it's not a
+technically bootstrap grid row it's going to be a next row just because some of the
+items or a lot of these items are going to start spilling over to the next line and
+there is going to be two of them per line. Okay. This hr here, the item tile hr,
+should only show up when we're squeezing the browser past, I believe the small,
+when it gets to be extra small. So let's save it and
+take a look at our browser and let's see what's going on here. Let's squeeze the browser a little bit and
+see if that hr shows up. And when we get to super small,
+the chart there shows up to visually separate the first item
+from the second item and so on. So let's go ahead and
+stretch it back out and go back to our code editor and
+let's style the pressing here. Let's remove this down
+the line right here. In fact that's actually those
+are two pricing type of styles so let's style them together, okay so
+the first thing we're doing is the menu item tile that is followed
+by menu item price. So the menu item price that is sitting
+inside of the element with a class name menu a new item tile,
+let's go take a look at the HTML of that. So the menu item tile is right here and
+the menu item price is right there. So basically, we're targeting this thing
+right here, this dip where the prices are. So let's go back to styles.css. And what we're doing is we're
+increasing it's font a little bit. Aligning it to the right because we
+wanted to align to the right over here, to the right of this picture. So we're aligning it to the right. And we're giving it
+a margin top negative 15. And a margin right of negative 15, so that is probably something that you will
+probably see that we need to adjust. In fact, let's go ahead and comment that out just to see what
+would happen if we didn't have that. Let's go ahead and comment that out. And let's go back to the code editor. Well actually before we do that,
+remember that stand that we had, the kind of unit portion,
+either pint or quart. Well we're just making that smaller. That's how we're targeting it, we're
+saying that inside the menu item price is a span, and that span should
+have a font size that's smaller. So let's save that and
+go back to our browser. And it looks pretty good. We see that we have the pints and
+the quarts smaller. These things are a little bit bigger. The picture is done pretty well so far,
+so I don't remember why I coded up these margins when I prepared to code for
+this lecture so I'm going to just leave them off for now let's go ahead and
+keep going in styling some more things. So let's go ahead and
+move this over here and actually these two things probably go together very
+well so let's leave those alone together. And so we're styling here is the picture. So let's move that up. So we're styling the picture. First of all remember that
+picture is going to have a little sign at the bottom right of
+the item number that corresponds to their, to the restaurant's existing menu. So for that we need to make the container
+element which is this item photo, .menu-item-photo, position: relative;. So we're making that position relative,
+giving it a nice maroon border, two pixel border. Again, if anything overflows,
+we're going to go ahead and clip that, make it padding zero,
+move the margin 15 pixels. To the left, meaning margin right will
+be moved to the left a little bit. And the margin left we'll leave as auto. So this is something that's going to
+basically separate nicely between the left side of our cell, and the right
+side of our cell where the description is. We'll give it a nice margin
+bottom of 20 pixels or so. And the maximum width of 250 pixels. Let's go ahead and take a look at the HTML of the menu
+item photo, right here, menu item photo. And you see that we made
+the image responsive. Well the image is 250 pixels wide. We don't want the image to be any bigger
+than that, otherwise this is going to become pixelated and the layout is
+probably going to get messed up as well. So that is why we're saying that
+the maximum width it can ever go is 250 pixels. Don't stretch this element anymore. Okay, then there's the menu
+item photo followed by a div. Well let's take a look as
+to what we're targeting. So the menu item photo is right here. And the div is that kind
+of corresponding ID of the menu that's corresponding
+to the restaurant's menu.
+		</p>
+  </div>
+  
+ 
+</div> 
+</div> 
+  
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
